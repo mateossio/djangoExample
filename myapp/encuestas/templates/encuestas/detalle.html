@@ -11,16 +11,16 @@
     <title>{{question}}</title>
   </head>
   <body>
-    <h1> Esta es la pregunta : {{question}}</h1>
+    <!--<h1> Esta es la pregunta : {{question}}</h1>
     <h2>Las opciones son:</h2>
     <ul>
 	{% for choice in question.choice_set.all %}
 		<li>
-	    	<h3>{{ choice.choice_text }}:{{choice.votes}}<a class="btn btn-primary" href="/encuestas/{{question.id}}/{{choice.id}}/vote" role="button">Votar</a></h3>
+	    	<h3>{{ choice.choice_text }}:{{choice.votes}}<a class="btn btn-primary" href="{% url 'encuesta:choice_vote' question.id choice.id %}" role="button">Votar</a></h3>
     	</li>
 	{% endfor %}
 	</ul>
-	<a href="/encuestas"> Volver</a>
+	<a href="/encuestas"> Volver</a>-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
